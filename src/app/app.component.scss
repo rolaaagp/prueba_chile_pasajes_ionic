@@ -1,0 +1,30 @@
+::ng-deep ion-thumbnail {
+  --size: 140px;
+  --border-radius: var(--border-radius-img)
+}
+
+::ng-deep .image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5em;
+}
+
+::ng-deep .image-item {
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+
+  .thumbnail {
+    position: relative;
+
+    .icon-overlay {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      font-size: 1.5rem;
+      border-radius: var(--border-radius-circle);
+      background-color: var(--ion-background-color);
+      padding: 4px;
+    }
+  }
+}

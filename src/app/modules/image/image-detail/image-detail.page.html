@@ -1,0 +1,13 @@
+<app-custom-page [title]="texts.VIEW_DETAIL" [allowBack]="true">
+  <div
+    *ngIf="image; else noImage"
+    class="zoom-container"
+    [attr.inert]="!image ? '' : null"
+  >
+    <app-img-with-zoom [src]="image.url" [alt]="image.name"></app-img-with-zoom>
+  </div>
+</app-custom-page>
+
+<ng-template #noImage>
+  <p>{{texts.NO_CONTENT_IMAGE}}</p>
+</ng-template>

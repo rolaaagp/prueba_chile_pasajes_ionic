@@ -1,0 +1,34 @@
+<app-custom-page [title]="texts.APP_TITLE" [ifRenderlogo]="true">
+
+  <div class="container-cards">
+    <app-card-img
+      [title]="texts.TITLES.HOME_TITLE"
+      [subtitle]="texts.TITLES.HOME_SUBTITLE"
+    >
+      <ion-list class="image-grid">
+        <ng-container *ngIf="!images || images.length === 0; else imagesList">
+          <app-skeleton-img
+            [loading]="true"
+            [repetitions]="50"
+          ></app-skeleton-img>
+        </ng-container>
+        <ng-template #imagesList>
+          <div
+            *ngFor="let img of images"
+            class="image-item"
+            (click)="goToDetail(img)"
+          >
+            <ion-thumbnail class="thumbnail">
+              <img [src]="img.url" />
+              <ion-icon
+                name="arrow-forward-outline"
+                class="icon-overlay"
+                
+              ></ion-icon>
+            </ion-thumbnail>
+          </div>
+        </ng-template>
+      </ion-list>
+    </app-card-img>
+  </div>
+</app-custom-page>

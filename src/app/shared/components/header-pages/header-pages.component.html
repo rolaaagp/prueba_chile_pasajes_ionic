@@ -1,0 +1,11 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" *ngIf="allowBack">
+      <ion-back-button defaultHref="/" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title>{{ title }}</ion-title>
+    <img *ngIf="ifRenderlogo" src="assets/img/logo.jpg" alt="Logo DuckShots" class="img-logo" slot="end">
+  </ion-toolbar>
+  <ng-content></ng-content> 
+</ion-header>

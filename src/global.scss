@@ -1,4 +1,3 @@
-
 @import "@ionic/angular/css/core.css";
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
@@ -9,4 +8,16 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
-@import "@ionic/angular/css/palettes/dark.system.css";
+
+:root {
+  --ion-color-primary: #ffd966;
+  --ion-color-secondary: #78c2ad;
+  --ion-color-tertiary: #ffa07a;
+  --ion-background-color: #fff8e1;
+  --ion-text-color: #333333;
+  --ion-color-selected: #d4c5927c;
+  --ion-color-border: #e0e0e0;
+  --ion-color-shadow: #28251a;
+  --border-radius-img: 14px;
+  --border-radius-circle: 50%;
+}

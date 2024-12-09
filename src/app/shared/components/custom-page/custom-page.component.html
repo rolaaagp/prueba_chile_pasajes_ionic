@@ -1,0 +1,16 @@
+<div class="ion-page">
+  <app-header-pages
+    [title]="title"
+    [allowBack]="allowBack"
+    [ifRenderlogo]="ifRenderlogo"
+  >
+    <ng-container *ngIf="headerChildren">
+      <ng-container *ngTemplateOutlet="headerChildren"></ng-container>
+    </ng-container>
+  </app-header-pages>
+
+  <ion-content class="ion-padding">
+    <ng-content></ng-content>
+  </ion-content>
+
+</div>

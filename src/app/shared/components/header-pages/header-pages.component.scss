@@ -1,0 +1,18 @@
+.img-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 1em 1em;
+  object-fit: cover;
+}
+
+::ng-deep .header-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+ion-buttons > * {
+  color: var(--ion-text-color);
+}

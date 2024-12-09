@@ -1,0 +1,16 @@
+<app-custom-page [title]="texts.SEARCH_RANDOM" [allowBack]="true">
+  <ng-container *ngIf="!loading">
+    <div [attr.inert]="!image ? '' : null">
+      <app-img-with-zoom [src]="image.url" [alt]="'image'"></app-img-with-zoom>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="loading">
+    <div class="container-skeleton-random">
+      <app-skeleton-img [loading]="true" [repetitions]="1"></app-skeleton-img>
+    </div>
+  </ng-container>
+  <button role="button" class="container-recharg" (click)="loadRandomImage()">
+    <b>{{texts.RECHARGE}}</b>
+    <ion-icon name="shuffle-outline"></ion-icon>
+  </button>
+</app-custom-page>

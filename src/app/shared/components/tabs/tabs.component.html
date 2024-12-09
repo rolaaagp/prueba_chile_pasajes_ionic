@@ -1,0 +1,8 @@
+<ion-tabs id="main-content">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button [tab]="option.link" *ngFor="let option of options">
+      <ion-icon [name]="option.icon"></ion-icon>
+      {{ option.label }}
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

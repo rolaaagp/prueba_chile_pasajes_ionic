@@ -1,0 +1,14 @@
+<div class="zoom-container">
+  <ion-img
+    *ngIf="src; else noImage"
+    [src]="src"
+    [alt]="alt"
+    class="zoom-img"
+    (click)="toggleZoom($event)"
+  ></ion-img>
+  <p>{{texts.ZOOM_IN}}</p>
+</div>
+
+<ng-template #noImage>
+  <p>{{texts.NO_CONTENT_IMAGE}}</p>
+</ng-template>
