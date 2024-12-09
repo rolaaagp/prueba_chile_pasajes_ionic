@@ -9,6 +9,7 @@ import { ImageModel, ImgRandomResponse, ImgResponse } from 'src/app/interfaces';
 })
 export class ImageService {
   private readonly apiUrl = environment.API_URL;
+  private readonly secureUrlCors = environment.SECURE_URL_CORS;
   private _http: HttpClient = inject(HttpClient);
   private _headers: HttpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
@@ -31,7 +32,7 @@ export class ImageService {
     }
 
     return this._http
-      .get<ImageModel>(`https://cors-anywhere.herokuapp.com/${this.apiUrl}/list?format=json`, {
+      .get<ImageModel>(`${this.secureUrlCors}/${this.apiUrl}/list?format=json`, {
         headers: this._headers,
       })
       .pipe(
@@ -52,7 +53,7 @@ export class ImageService {
  * @returns Gets all images from api, return a list of type ImageModel
  */
   getRandomImage(): Observable<ImgRandomResponse> {
-    return this._http.get<ImgRandomResponse>(`https://cors-anywhere.herokuapp.com/${this.apiUrl}/random`, { headers: this._headers });
+    return this._http.get<ImgRandomResponse>(`${this.secureUrlCors}/${this.apiUrl}/random`, { headers: this._headers });
   }
 
 
