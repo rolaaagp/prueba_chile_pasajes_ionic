@@ -10,7 +10,7 @@ Antes de comenzar, asegúrate de que tu sistema tenga instaladas las siguientes 
 - **Ionic CLI**: Instálalo globalmente con una terminal:
   npm install -g @ionic/cli
 
-#IMPORTANTE
+# IMPORTANTE
 * Realizar, ya que sin esto la API [random-d uk](https://random-d.uk/api) bloqueará las peticiones que se realicen.
 
 Para habilitar un proxy para consumir la API pública de [random-d uk](https://random-d.uk/api). Ingresar al siguiente enlace y presionar el botón "Request temporary access to the demo server" [Cors Proxy Demo](https://cors-anywhere.herokuapp.com/corsdemo)
